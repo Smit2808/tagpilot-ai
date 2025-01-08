@@ -10,9 +10,9 @@
 /**
  * Display the settings page for the TagPilot AI plugin.
  *
- * @since 1.0.0
  */
 function tagpilot_ai_settings_page() {
+	// Retrieve the plugin settings from the database.
 	$options = get_option( 'tagpilot_ai_settings' );
 	?>
 	<div class="tagpilot-ai-settings-page-wrap">
@@ -57,7 +57,6 @@ function tagpilot_ai_settings_page() {
 /**
  * Register settings for the TagPilot AI plugin.
  *
- * @since 1.0.0
  */
 function tagpilot_ai_register_settings() {
 	// Register new settings for "tagpilot_ai_settings_group" page.

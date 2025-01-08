@@ -1,13 +1,29 @@
 <?php
+/**
+ * Class Tagpilot_Ai_Api_Helper_Functions
+ *
+ * Makes the AI API calls.
+ *
+ * @package Tagpilot_AI
+ * @link    https://profiles.wordpress.org/smit08/
+ * @since   1.0.0
+ */
+
 if ( ! class_exists( 'Tagpilot_Ai_Api_Helper_Functions' ) ) {
+	/**
+	 * Class Tagpilot_Ai_Api_Helper_Functions
+	 */
 	class Tagpilot_Ai_Api_Helper_Functions {
+		/**
+		 * Dandelion API URL
+		 */
 		const DANDELION_API_URL = 'https://api.dandelion.eu/datatxt/nex/v1';
 
 		/**
 		 * Get dandelion data
 		 *
-		 * @param  array $args
-		 * @return array
+		 * @param  array $args Arguments for the API request.
+		 * @return array $return API response.
 		 */
 		public static function tagpilot_ai_get_dandelion_api_results( $args ) {
 			$return['status']  = 'error';
@@ -23,6 +39,7 @@ if ( ! class_exists( 'Tagpilot_Ai_Api_Helper_Functions' ) ) {
 			$dandelion_api_token            = ! empty( $settings_data['tagpilot_ai_api_key'] ) ? $settings_data['tagpilot_ai_api_key'] : '';
 			$dandelion_api_confidence_value = ! empty( $settings_data['tagpilot_ai_api_confidence'] ) ? $settings_data['tagpilot_ai_api_confidence'] : '0.6';
 
+			// Check if API token is empty.
 			if ( empty( trim( $dandelion_api_token ) ) ) {
 				$return['status']  = 'error';
 				$return['message'] = esc_html__(
@@ -30,13 +47,12 @@ if ( ! class_exists( 'Tagpilot_Ai_Api_Helper_Functions' ) ) {
 					'tagpilot-ai'
 				);
 			} elseif ( empty( trim( $content ) ) ) {
-
+				// Check if content is empty.
 				$return['status']  = 'error';
 				$return['message'] = esc_html__(
 					'Selected content is empty.',
 					'tagpilot-ai'
 				);
-
 			} else {
 				$request_ws_args                   = array();
 				$request_ws_args['text']           = $clean_content;
@@ -50,10 +66,12 @@ if ( ! class_exists( 'Tagpilot_Ai_Api_Helper_Functions' ) ) {
 					)
 				);
 
+				// Check if the response is not an error.
 				if ( ! is_wp_error( $response ) && $response != null ) {
 					$status_code = wp_remote_retrieve_response_code( $response );
 					$body_data   = json_decode( wp_remote_retrieve_body( $response ) );
 
+					// Check if the status code is not 200.
 					if ( $status_code !== 200 ) {
 						$error_message     = ( is_object( $body_data ) && isset( $body_data->message ) ) ? $body_data->message : $status_code;
 						$return['status']  = 'error';
@@ -71,6 +89,7 @@ if ( ! class_exists( 'Tagpilot_Ai_Api_Helper_Functions' ) ) {
 								'tagpilot-ai'
 							);
 
+							// add the logs to the post meta.
 							update_post_meta( $post_id, 'tagpilot_ai_terms_log', $terms );
 							update_post_meta( $post_id, 'tagpilot_ai_content_log', $content );
 						} else {

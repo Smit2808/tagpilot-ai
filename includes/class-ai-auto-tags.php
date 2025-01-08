@@ -37,14 +37,7 @@ class Ai_Auto_Tags {
 	}
 
 	public static function tagpilot_ai_auto_tag_for_posts( $post_id, $post ) {
-		// Log post details for debugging
-		// error_log( 'Post ID: ' . $post_id );
-		// error_log( 'Post Type: ' . $post->post_type );
-		// error_log( 'Post Status: ' . $post->post_status );
-		// error_log( 'Post Title: ' . $post->post_title );
-		// error_log( 'Post Content: ' . $post->post_content );
 		$options = get_option( 'tagpilot_ai_settings' );
-		// error_log( 'Key: ' . $options['tagpilot_ai_api_key'] );
 
 		if (empty($options)) {
 			return false;
@@ -83,7 +76,10 @@ class Ai_Auto_Tags {
 
 		if (!empty($dandelion_results['results'])) {
 			$tag_results = $dandelion_results['results'];
-			$data = $tag_results;
+			$tags = array();
+
+			// Assign tags to the post
+			wp_set_post_tags($post_id, $tag_results, true);
 		}
 	}
 	

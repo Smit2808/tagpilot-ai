@@ -39,7 +39,12 @@ define( 'TAGPILOT_AI_VERSION', '1.0.0' );
 if ( ! defined( 'TAGPILOT_AI_PLUGIN_PATH' ) ) {
 	define( 'TAGPILOT_AI_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
 }
+define( 'TAGPILOT_AI_PLUGIN_URL', plugin_dir_url( TAGPILOT_AI_PLUGIN_PATH ) );
 
 require_once TAGPILOT_AI_PLUGIN_PATH . 'includes/tagpilot-ai-action-function.php';
 
 require_once TAGPILOT_AI_PLUGIN_PATH . 'templates/tagpilot-ai-setings-page.php';
+
+require_once TAGPILOT_AI_PLUGIN_PATH . 'includes/class-ai-auto-tags.php';
+
+require_once TAGPILOT_AI_PLUGIN_PATH . 'includes/class-tagpilot-ai-api-helper-functions.php';

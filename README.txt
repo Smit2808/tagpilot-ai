@@ -1,21 +1,18 @@
-=== Plugin Name ===
-Contributors: (this should be a list of wordpress.org userid's)
+=== TagPilot AI – Smart Auto-Tagging ===
+Contributors: smit08
 Donate link: https://https://profiles.wordpress.org/smit08//
-Tags: comments, spam
+Tags: AI, AutoTag, Tag Management, AutoTagging, Auto Tag
 Requires at least: 3.0.1
-Tested up to: 3.4
-Stable tag: 4.3
+Tested up to: 6.7.1
+Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Here is a short description of the plugin.  This should be no more than 150 characters.  No markup here.
+TagPilot AI is your intelligent companion for effortless content organization.
 
 == Description ==
 
-This is the long description.  No limit, and you can use Markdown (as well as in the following sections).
-
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
+TagPilot AI is your intelligent companion for effortless content organization. This plugin automatically analyzes your posts, assigns relevant tags, and saves you time.
 
 A few notes about the sections above:
 

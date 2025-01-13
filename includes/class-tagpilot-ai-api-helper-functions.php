@@ -73,8 +73,9 @@ if ( ! class_exists( 'Tagpilot_Ai_Api_Helper_Functions' ) ) {
 
 					// Check if the status code is not 200.
 					if ( $status_code !== 200 ) {
-						$error_message     = ( is_object( $body_data ) && isset( $body_data->message ) ) ? $body_data->message : $status_code;
-						$return['status']  = 'error';
+						$error_message    = ( is_object( $body_data ) && isset( $body_data->message ) ) ? $body_data->message : $status_code;
+						$return['status'] = 'error';
+						// translators: %1s: Error message from the API.
 						$return['message'] = sprintf( esc_html__( 'API Error: %1s.', 'tagpilot-ai' ), $error_message );
 					} else {
 						$data  = is_object( $body_data ) ? $body_data->annotations : '';

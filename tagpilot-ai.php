@@ -12,7 +12,7 @@
  * @since             1.0.0
  *
  * @wordpress-plugin
- * Plugin Name:       TagPilot AI – Smart Auto-Tagging for WordPress
+ * Plugin Name:       TagPilot AI – Smart Auto-Tagging
  * Plugin URI:        https://https://profiles.wordpress.org/smit08/
  * Description:       TagPilot AI is your intelligent companion for effortless content organization. This plugin automatically analyzes your posts, assigns relevant tags, and saves you time.
  * Version:           1.0.0
@@ -21,7 +21,6 @@
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       tagpilot-ai
- * Domain Path:       /languages
  */
 
 // If this file is called directly, abort.

@@ -77,7 +77,7 @@ class Ai_Auto_Tags {
 		}
 
 		// Clean up the content.
-		$content = trim( strip_tags( $content ) );
+		$content = trim( wp_strip_all_tags( $content ) );
 
 		// Check if content is empty.
 		if ( empty( $content ) ) {

@@ -10,7 +10,6 @@
 
 /**
  * Display the settings page for the TagPilot AI plugin.
- *
  */
 function tagpilot_ai_settings_page() {
 	// Retrieve the plugin settings from the database.
@@ -18,6 +17,9 @@ function tagpilot_ai_settings_page() {
 	?>
 	<div class="tagpilot-ai-settings-page-wrap">
 		<h1><?php esc_html_e( 'TagPilot AI Settings', 'tagpilot-ai' ); ?></h1>
+		<?php if ( empty( $options['tagpilot_ai_api_key'] ) ) : ?>
+			<p><?php esc_html_e( 'Note: Please enter your Dandelion API key below. The plugin requires a valid API key to function properly. To obtain one, create an account at ', 'tagpilot-ai' ); ?><a href="https://dandelion.eu/" target="_blank">https://dandelion.eu/</a><?php esc_html_e( ' and retrieve your API key from your Dandelion profile.', 'tagpilot-ai' ); ?></p>
+		<?php endif; ?>
 		<form method="post" action="options.php">
 		   <?php
 			// Output security fields for the registered setting "tagpilot_ai_settings_group".
@@ -47,9 +49,9 @@ function tagpilot_ai_settings_page() {
 			   </tr>
 		   </table>
 		   <?php
-		   // Output save settings button.
-		   submit_button();
-		   ?>
+			// Output save settings button.
+			submit_button();
+			?>
 		</form>
 	</div>
 	<?php
@@ -57,7 +59,6 @@ function tagpilot_ai_settings_page() {
 
 /**
  * Register settings for the TagPilot AI plugin.
- *
  */
 function tagpilot_ai_register_settings() {
 	// Register new settings for "tagpilot_ai_settings_group" page.

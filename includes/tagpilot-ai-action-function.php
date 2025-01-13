@@ -12,7 +12,6 @@ add_action( 'admin_menu', 'tagpilot_ai_create_menu' );
 
 /**
  * Create a top-level menu in the WordPress admin.
- *
  */
 function tagpilot_ai_create_menu() {
 	// Add a top-level menu.
@@ -32,7 +31,6 @@ add_action( 'admin_enqueue_scripts', 'tagpilot_ai_enqueue_styles' );
 
 /**
  * Enqueue admin styles.
- *
  */
 function tagpilot_ai_enqueue_styles() {
 	wp_enqueue_style( 'tagpilot-ai-style', TAGPILOT_AI_PLUGIN_URL . 'tagpilot-ai/assets/css/tagpilot-ai-style.css', array(), '1.0.0' );

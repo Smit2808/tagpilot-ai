@@ -3,6 +3,7 @@
 /**
  * This file is for HTML structure of plugin's settings page.
  *
+ * @package    Tagpilot_AI
  * @link       https://profiles.wordpress.org/smit08/
  * @since      1.0.0
  */
@@ -32,15 +33,15 @@ function tagpilot_ai_settings_page() {
 			   </tr>
 			   <tr valign="top">
 			   <th scope="row"><?php esc_html_e( 'Dandelion API Confidence Value', 'tagpilot-ai' ); ?></th>
-			   <td><input type="number" name="tagpilot_ai_settings[tagpilot_ai_api_confidence]" value="<?php echo esc_attr( $options['tagpilot_ai_api_confidence'] ?? '' ); ?>" min="0" max="1" step="0.1" /></td>
+			   <td><input type="number" name="tagpilot_ai_settings[tagpilot_ai_api_confidence]" value="<?php echo esc_attr( $options['tagpilot_ai_api_confidence'] ?? '0.7' ); ?>" min="0" max="1" step="0.1" /></td>
 			   </tr>
 			   <tr valign="top">
 			   <th scope="row"><?php esc_html_e( 'Make Auto Terms From', 'tagpilot-ai' ); ?></th>
 			   <td>
 				   <select name="tagpilot_ai_settings[tagpilot_ai_auto_terms_from]">
-					   <option value="post_title" <?php selected( $options['tagpilot_ai_auto_terms_from'] ?? '', 'title' ); ?>><?php esc_html_e( 'Post Title', 'tagpilot-ai' ); ?></option>
-					   <option value="post_content" <?php selected( $options['tagpilot_ai_auto_terms_from'] ?? '', 'content' ); ?>><?php esc_html_e( 'Post Content', 'tagpilot-ai' ); ?></option>
-					   <option value="both" <?php selected( $options['tagpilot_ai_auto_terms_from'] ?? '', 'both' ); ?>><?php esc_html_e( 'Both', 'tagpilot-ai' ); ?></option>
+					   <option value="post_title" <?php selected( $options['tagpilot_ai_auto_terms_from'] ?? 'both', 'title' ); ?>><?php esc_html_e( 'Post Title', 'tagpilot-ai' ); ?></option>
+					   <option value="post_content" <?php selected( $options['tagpilot_ai_auto_terms_from'] ?? 'both', 'content' ); ?>><?php esc_html_e( 'Post Content', 'tagpilot-ai' ); ?></option>
+					   <option value="both" <?php selected( $options['tagpilot_ai_auto_terms_from'] ?? 'both', 'both' ); ?>><?php esc_html_e( 'Both', 'tagpilot-ai' ); ?></option>
 				   </select>
 			   </td>
 			   </tr>

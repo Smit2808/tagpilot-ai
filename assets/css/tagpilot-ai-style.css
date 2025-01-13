@@ -1,15 +1,1 @@
-.tagpilot-ai-settings-page-wrap h1{
-    font-weight: 500;
-}
-.tagpilot-ai-settings-page-wrap .form-table tr{
-    display: flex;
-}
-.tagpilot-ai-settings-page-wrap .form-table th{
-    width: 20%;
-}
-.tagpilot-ai-settings-page-wrap .form-table td{
-    width: 80%;
-}
-.tagpilot-ai-settings-page-wrap .form-table td input, .tagpilot-ai-settings-page-wrap .form-table td select{
-    width: 300px;
-}
+.tagpilot-ai-settings-page-wrap h1{font-weight:500}.tagpilot-ai-settings-page-wrap .form-table tr{display:flex}.tagpilot-ai-settings-page-wrap .form-table th{width:20%}.tagpilot-ai-settings-page-wrap .form-table td{width:80%}.tagpilot-ai-settings-page-wrap .form-table td input,.tagpilot-ai-settings-page-wrap .form-table td select{width:300px}

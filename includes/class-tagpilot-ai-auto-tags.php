@@ -1,6 +1,6 @@
 <?php
 /**
- * Class Ai_Auto_Tags
+ * Class Tagpilot_Ai_Auto_Tags
  *
  * Handles the automatic tagging of posts using AI.
  *
@@ -9,7 +9,7 @@
  * @since   1.0.0
  */
 
-class Ai_Auto_Tags {
+class Tagpilot_Ai_Auto_Tags {
 
 	/**
 	 * Constructor
@@ -153,6 +153,6 @@ class Ai_Auto_Tags {
 }
 
 // Initialize the class if it exists.
-if ( class_exists( 'Ai_Auto_Tags' ) ) {
-	new Ai_Auto_Tags();
+if ( class_exists( 'Tagpilot_Ai_Auto_Tags' ) ) {
+	new Tagpilot_Ai_Auto_Tags();
 }

@@ -62,7 +62,33 @@ function tagpilot_ai_settings_page() {
  */
 function tagpilot_ai_register_settings() {
 	// Register new settings for "tagpilot_ai_settings_group" page.
-	register_setting( 'tagpilot_ai_settings_group', 'tagpilot_ai_settings' );
+	register_setting( 'tagpilot_ai_settings_group', 'tagpilot_ai_settings', array(
+		'sanitize_callback' => 'tagpilot_ai_sanitize_settings'
+	) );
+}
+
+/**
+ * Sanitize the settings input.
+ *
+ * @param array $input The input array.
+ * @return array The sanitized input array.
+ */
+function tagpilot_ai_sanitize_settings( $input ) {
+	$sanitized_input = array();
+
+	if ( isset( $input['tagpilot_ai_api_key'] ) ) {
+		$sanitized_input['tagpilot_ai_api_key'] = sanitize_text_field( $input['tagpilot_ai_api_key'] );
+	}
+
+	if ( isset( $input['tagpilot_ai_api_confidence'] ) ) {
+		$sanitized_input['tagpilot_ai_api_confidence'] = floatval( $input['tagpilot_ai_api_confidence'] );
+	}
+
+	if ( isset( $input['tagpilot_ai_auto_terms_from'] ) ) {
+		$sanitized_input['tagpilot_ai_auto_terms_from'] = sanitize_text_field( $input['tagpilot_ai_auto_terms_from'] );
+	}
+
+	return $sanitized_input;
 }
 
 // Hook into the 'admin_init' action to register the settings.

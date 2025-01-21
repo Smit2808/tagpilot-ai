@@ -8,16 +8,18 @@
  * registers the activation and deactivation functions, and defines a function
  * that starts the plugin.
  *
- * @link              https://https://profiles.wordpress.org/smit08/
+ * @link              https://profiles.wordpress.org/smit08/
  * @since             1.0.0
  *
  * @wordpress-plugin
  * Plugin Name:       TagPilot AI – Smart Auto-Tagging
- * Plugin URI:        https://https://profiles.wordpress.org/smit08/
+ * Plugin URI:        https://github.com/Smit2808/tagpilot-ai
  * Description:       TagPilot AI is your intelligent companion for effortless content organization. This plugin automatically analyzes your posts, assigns relevant tags, and saves you time.
  * Version:           1.0.0
+ * Requires at least: 5.8
+ * Requires PHP:      7.0
  * Author:            Smit Rathod
- * Author URI:        https://https://profiles.wordpress.org/smit08//
+ * Author URI:        https://profiles.wordpress.org/smit08/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       tagpilot-ai
@@ -44,6 +46,6 @@ require_once TAGPILOT_AI_PLUGIN_PATH . 'includes/tagpilot-ai-action-function.php
 
 require_once TAGPILOT_AI_PLUGIN_PATH . 'templates/tagpilot-ai-setings-page.php';
 
-require_once TAGPILOT_AI_PLUGIN_PATH . 'includes/class-ai-auto-tags.php';
+require_once TAGPILOT_AI_PLUGIN_PATH . 'includes/class-tagpilot-ai-auto-tags.php';
 
 require_once TAGPILOT_AI_PLUGIN_PATH . 'includes/class-tagpilot-ai-api-helper-functions.php';

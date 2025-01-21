@@ -19,6 +19,10 @@ TagPilot AI is your intelligent companion for effortless content organization. T
 
 TagPilot AI utilizes the Dandelion API to analyze post content and intelligently suggest relevant tags using AI-powered natural language processing. This automation helps improve content organization, discoverability, and user experience with minimal effort.
 
+Tagpilot AI plugin sends the post content to Dandelion to analyze the text and suggest the tags by AI.
+
+This service is provided by "spaziodati.eu": [privacy policy](https://dandelion.eu/api-privacy/), [terms of use](https://dandelion.eu/tos/).
+
 ---
 
 ## Features

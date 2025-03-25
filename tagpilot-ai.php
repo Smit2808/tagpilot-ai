@@ -49,3 +49,5 @@ require_once TAGPILOT_AI_PLUGIN_PATH . 'templates/tagpilot-ai-setings-page.php';
 require_once TAGPILOT_AI_PLUGIN_PATH . 'includes/class-tagpilot-ai-auto-tags.php';
 
 require_once TAGPILOT_AI_PLUGIN_PATH . 'includes/class-tagpilot-ai-api-helper-functions.php';
+
+require_once TAGPILOT_AI_PLUGIN_PATH . 'templates/class-tagpilot-ai-settings-meta-boxes.php';

@@ -41,6 +41,12 @@ class Tagpilot_Ai_Auto_Tags {
 			return;
 		}
 
+		$auto_tagging_disabled = get_post_meta( $post_id, '_tagpilot_ai_disable_auto_tagging', true );
+
+		if ( $auto_tagging_disabled === 'yes' ) {
+			return;
+		}
+
 		// Auto tag the post.
 		self::tagpilot_ai_auto_tag_for_posts( $post_id, $post );
 	}

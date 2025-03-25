@@ -1,1 +1,14 @@
 .tagpilot-ai-settings-page-wrap h1{font-weight:500}.tagpilot-ai-settings-page-wrap .form-table tr{display:flex}.tagpilot-ai-settings-page-wrap .form-table th{width:20%}.tagpilot-ai-settings-page-wrap .form-table td{width:80%}.tagpilot-ai-settings-page-wrap .form-table td input,.tagpilot-ai-settings-page-wrap .form-table td select{width:300px}
+
+#tagpilot_ai_meta_box h2{
+    color: #1e1e1e;
+    font-weight: 500 !important;
+    font-size: 13px;
+    padding: 8px 12px !important;
+}
+#tagpilot_ai_meta_box .inside{
+    padding: 0 12px 12px;
+}
+#tagpilot_ai_meta_box .inside .tagpilot-ai-radio-yes-button{
+    margin-right: 10px;
+}
